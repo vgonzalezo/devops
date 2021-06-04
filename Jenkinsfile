@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'node:latest' }
+    docker { image 'node:latest', port '4200' }
   }
   stages {
     stage('Install') {
