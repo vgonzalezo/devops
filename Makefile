@@ -7,4 +7,3 @@ build:
 deploy:
 	docker rm -f demo-app
 	docker run -itd --name demo-app -p 80:80 demo-app:latest
-	docker logs -f demo-app	
