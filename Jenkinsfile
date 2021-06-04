@@ -4,10 +4,12 @@ pipeline {
   }
   stages {
     stage('Install') {
-      steps { sh 'cd app && npm install' }
+      dir('app') {
+        steps { sh 'npm install' }
+      }
     }
  
-    stage('Test') {
+    /*stage('Test') {
       parallel {
         stage('Static code analysis') {
             steps { sh 'npm run-script lint' }
@@ -16,10 +18,12 @@ pipeline {
             steps { sh 'npm run-script test' }
         }
       }
-    }
+    }*/
  
     stage('Build') {
-      steps { sh 'npm run-script build' }
+      dir('app') {
+        steps { sh 'npm start' }
+      }
     }
   }
 }
