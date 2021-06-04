@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker.image('node:latest').withRun('-p 4200:4200')
+    docker { image 'node:latest' }
   }
   stages {
     stage('Install') {
@@ -19,7 +19,11 @@ pipeline {
     }*/
  
     stage('Build') {
-      steps { dir('app') {sh 'npm run debug' }}
+      steps { sh 'make build' }
+    }
+
+    stage('Deploy') {
+      steps { sh 'make deploy' }
     }
   }
 }
