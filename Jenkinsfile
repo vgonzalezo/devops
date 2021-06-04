@@ -4,9 +4,7 @@ pipeline {
   }
   stages {
     stage('Install') {
-      dir('app') {
-        steps { sh 'npm install' }
-      }
+      steps { dir('app') { sh 'npm install' }}
     }
  
     /*stage('Test') {
@@ -21,9 +19,7 @@ pipeline {
     }*/
  
     stage('Build') {
-      dir('app') {
-        steps { sh 'npm start' }
-      }
+      steps { dir('app') {sh 'npm start' }}
     }
   }
 }
