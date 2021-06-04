@@ -19,7 +19,7 @@ pipeline {
     }*/
  
     stage('Build') {
-      steps { dir('app') {sh 'npm start' }}
+      steps { dir('app') {sh 'npm debug' }}
     }
   }
 }
