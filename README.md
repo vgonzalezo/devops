@@ -36,5 +36,10 @@ Instalar angular-cli
 - sudo npm install -g @angular/cli@latest
 - sudo ng new app
 
+Servidor
+- https://{id}.ngrok.io/github-webhook/
 
-https://{id}.ngrok.io/github-webhook/
+Conectar servidores con ssh
+- ssh-keygen
+- copiar .ssh/id_rsa.pub
+- pegar en .ssh/authorized_keys
