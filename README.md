@@ -43,3 +43,6 @@ Conectar servidores con ssh
 - ssh-keygen
 - copiar .ssh/id_rsa.pub
 - pegar en .ssh/authorized_keys
+
+Limpiar cache de .gitignore
+- git rm -r --cached {files_folders}
