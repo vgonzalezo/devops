@@ -5,6 +5,8 @@ build:
 	docker build -t demo-app ./app
 
 test:
+	cd app
+	npm install
 	npm run sonar
 
 deploy:
