@@ -7,7 +7,8 @@
     "debug": "ng serve --host 0.0.0.0 --disable-host-check --poll 1",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sonar": "sonar-scanner -Dsonar.projectKey=melilabs -Dsonar.sources=. -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=132994b84be5907c4f34661996ebf4d3d1c37490 -Dsonar.scm.forceReloadAll=true -Dsonar.qualitygate.wait=true"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "typescript": "~4.2.3"
+    "typescript": "~4.2.3",
+    "sonar-scanner": "^3.1.0"
   }
 }
