@@ -5,8 +5,6 @@ build:
 	docker build -t demo-app ./app
 
 test:
-	apt update
-	apt-get install openjdk-8-jre
 	cd app && npm install && npm run sonar
 
 deploy:
