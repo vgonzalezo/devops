@@ -1,6 +1,9 @@
 pipeline {
   agent {
-    docker { image 'node:latest' }
+    docker { 
+      image 'node:latest', 
+      args '-u 0:0' 
+    }
   }
   stages {
     stage('Test') {
